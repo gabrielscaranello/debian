@@ -2,6 +2,8 @@
 
 echo "Enabling services..."
 
-sudo systemctl enable docker
+sudo systemctl enable --now docker
+sudo systemctl enable --now ufw
+sudo ufw enable
 
 echo "Services enabled."
