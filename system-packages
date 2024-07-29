@@ -45,6 +45,7 @@ luarocks
 ninja-build
 numlockx
 onlyoffice-desktopeditors
+packagekit
 papirus-icon-theme
 piper
 power-profiles-daemon
