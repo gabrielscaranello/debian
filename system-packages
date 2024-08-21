@@ -15,8 +15,8 @@ docker-compose-plugin
 exa
 fd-find
 file-roller
-firefox-esr
-firefox-esr-l10n-pt-br
+firefox
+firefox-l10n-pt-br
 flameshot
 fonts-liberation
 fonts-noto-color-emoji

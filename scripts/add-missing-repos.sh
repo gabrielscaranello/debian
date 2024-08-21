@@ -24,6 +24,18 @@ _add_docker_repo() {
 	echo "Docker repo added."
 }
 
+_add_firefox_repo() {
+	echo "Adding Firefox repo..."
+	echo "Removing old files if exists..."
+	sudo rm -rf /etc/apt/keyrings/packages.mozilla.org.asc /etc/apt/sources.list.d/mozilla.list
+
+	echo "Adding Firefox repo..."
+	wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc >/dev/null
+	echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list >/dev/null
+
+	echo "Firefox repo added."
+}
+
 _add_onlyoffice_repo() {
 	echo "Adding OnlyOffice repo..."
 	echo "Removing old files if exists..."
@@ -80,6 +92,7 @@ _add_vscode_repo() {
 echo "Adding missing deb repos..."
 _add_contrib_nonfree_repo
 _add_docker_repo
+_add_firefox_repo
 _add_onlyoffice_repo
 _add_papirus_repo
 _add_spotify_repo
