@@ -1,6 +1,9 @@
 #! /bin/bash
 
 APPS=(
+	bottom
+	btop
+	mpv
 	nm-connection-editor
 	nvim
 	org.gnome.Extensions
