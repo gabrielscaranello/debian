@@ -6,17 +6,19 @@ window-height=600
 window-maximized=false
 window-width=600
 
-[org/gnome/control-center]
-last-panel='keyboard'
-window-state=(980, 640, true)
-
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
 
 [org/gnome/desktop/app-folders/folders/Utilities]
-apps=['yelp.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.baobab.desktop', 'btop.desktop', 'io.github.celluloid_player.Celluloid.desktop', 'nm-connection-editor.desktop', 'nvidia-settings.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.FileRoller.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'im-config.desktop', 'org.gnome.Weather.desktop', 'org.freedesktop.Piper.desktop', 'org.gnome.clocks.desktop', 'org.gnome.seahorse.Application.desktop', 'timeshift-gtk.desktop', 'gnome-abrt.desktop', 'gnome-system-log.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'software-properties-gtk.desktop', 'org.gnome.Evince.desktop', 'org.gnome.eog.desktop']
+apps=['yelp.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.baobab.desktop', 'io.github.celluloid_player.Celluloid.desktop', 'gufw.desktop', 'nvidia-settings.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.DiskUtility.desktop', 'org.flameshot.Flameshot.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.FileRoller.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'im-config.desktop', 'org.gnome.Logs.desktop', 'org.gnome.Weather.desktop', 'org.freedesktop.Piper.desktop', 'org.gnome.Software.desktop', 'org.gnome.clocks.desktop', 'org.gnome.seahorse.Application.desktop', 'software-properties-gtk.desktop', 'timeshift-gtk.desktop', 'org.gnome.Evince.desktop', 'org.gnome.eog.desktop']
 categories=['X-GNOME-Utilities']
+excluded-apps=['org.gnome.Characters.desktop']
 name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/input-sources]
@@ -58,7 +60,20 @@ tap-to-click=true
 two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/privacy]
+old-files-age=uint32 30
+recent-files-max-age=-1
+remember-recent-files=false
+remove-old-temp-files=true
+remove-old-trash-files=true
 report-technical-problems=true
+
+[org/gnome/desktop/sound]
+event-sounds=true
+theme-name='__custom'
+
+[org/gnome/desktop/wm/keybindings]
+maximize=@as []
+unmaximize=@as []
 
 [org/gnome/desktop/wm/preferences]
 action-middle-click-titlebar='minimize'
@@ -105,10 +120,13 @@ command='flameshot gui'
 name='Flameshot'
 
 [org/gnome/shell]
-app-picker-layout=[{'btop.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.Calendar.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.Contacts.desktop': <{'position': <4>}>, 'org.gnome.TextEditor.desktop': <{'position': <5>}>, 'org.flameshot.Flameshot.desktop': <{'position': <6>}>, 'gnome-system-monitor.desktop': <{'position': <7>}>, 'obsidian.desktop': <{'position': <8>}>, 'Utilities': <{'position': <9>}>}]
-disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'ubuntu-appindicators@ubuntu.com', 'AlphabeticalAppGrid@stuarthayhurst']
+app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'gnome-system-monitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>}]
+command-history=['r']
+disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'ubuntu-appindicators@ubuntu.com']
 enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'replaceActivitiesText@pratap.fastmail.fm', 'caffeine@patapon.info', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pano@elhan.io', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'tiling-assistant@leleat-on-github', 'trayIconsReloaded@selfmade.pl', 'top-bar-organizer@julian.gse.jsts.xyz']
-favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'google-chrome.desktop', 'firefox-esr.desktop', 'gimp.desktop', 'dbeaver-ce.desktop', 'onlyoffice-desktopeditors.desktop', 'code.desktop', 'spotify.desktop', 'discord.desktop', 'org.telegram.desktop.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'google-chrome.desktop', 'firefox.desktop', 'gimp.desktop', 'dbeaver-ce.desktop', 'obsidian.desktop', 'onlyoffice-desktopeditors.desktop', 'code.desktop', 'spotify.desktop', 'discord.desktop', 'org.telegram.desktop.desktop']
+last-selected-power-profile='power-saver'
+welcome-dialog-last-shown-version='43.9'
 
 [org/gnome/shell/extensions/blur-my-shell/appfolder]
 blur=true
@@ -134,7 +152,7 @@ blur=true
 
 [org/gnome/shell/extensions/caffeine]
 duration-timer=2
-indicator-position-max=1
+indicator-position-max=3
 restore-state=true
 show-indicator='only-active'
 toggle-state=true
@@ -232,6 +250,7 @@ activate-layout1=@as []
 activate-layout2=@as []
 activate-layout3=@as []
 active-window-hint=1
+active-window-hint-color='rgb(140,170,238)'
 auto-tile=@as []
 center-window=@as []
 debugging-free-rects=@as []
@@ -284,7 +303,7 @@ tray-margin-right=0
 alphabetize=true
 fixed-widths=true
 hide-icons=false
-hot-sensors=['_memory_usage_', '_processor_usage_', '__temperature_max__']
+hot-sensors=['_memory_usage_', '_processor_usage_', '_temperature_k10temp_tctl_']
 position-in-panel=0
 show-storage=false
 show-system=false
@@ -298,8 +317,4 @@ locations=@av []
 
 [org/gnome/terminal/legacy]
 theme-variant='dark'
-
-[org/gtk/gtk4/settings/file-chooser]
-show-hidden=true
-sort-directories-first=true
 
