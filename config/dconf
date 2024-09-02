@@ -6,6 +6,12 @@ window-height=600
 window-maximized=false
 window-width=600
 
+[org/gnome/TextEditor]
+custom-font='JetBrainsMono Nerd Font 11'
+discover-settings=true
+restore-session=false
+use-system-font=false
+
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
 
@@ -21,11 +27,21 @@ categories=['X-SuSE-YaST']
 name='suse-yast.directory'
 translate=true
 
+[org/gnome/desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/desktop-base/spacefun-theme/wallpaper/gnome-background.xml'
+picture-uri-dark='file:///usr/share/desktop-base/spacefun-theme/wallpaper/gnome-background.xml'
+primary-color='#ffffff'
+secondary-color='#000000'
+
+[org/gnome/desktop/datetime]
+automatic-timezone=false
+
 [org/gnome/desktop/input-sources]
 current=uint32 0
-mru-sources=[('xkb', 'us+intl'), ('xkb', 'br')]
+mru-sources=[('xkb', 'us+intl')]
 per-window=false
-sources=[('xkb', 'us+intl'), ('xkb', 'br')]
+sources=[('xkb', 'us+intl')]
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
@@ -41,13 +57,25 @@ show-battery-percentage=true
 text-scaling-factor=1.0
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-settings', 'org-gnome-shell-extensions']
+application-children=['org-gnome-settings', 'org-gnome-shell-extensions', 'gnome-power-panel', 'org-gnome-software', 'org-gnome-nautilus', 'org-gnome-fileroller']
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-fileroller]
+application-id='org.gnome.FileRoller.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-settings]
 application-id='org.gnome.Settings.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
 application-id='org.gnome.Shell.Extensions.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
@@ -66,6 +94,12 @@ remember-recent-files=false
 remove-old-temp-files=true
 remove-old-trash-files=true
 report-technical-problems=true
+
+[org/gnome/desktop/screensaver]
+picture-options='zoom'
+picture-uri='file:///usr/share/desktop-base/spacefun-theme/wallpaper/gnome-background.xml'
+primary-color='#ffffff'
+secondary-color='#000000'
 
 [org/gnome/desktop/sound]
 event-sounds=true
@@ -88,6 +122,9 @@ overlay-key='Super_L'
 [org/gnome/mutter/keybindings]
 toggle-tiled-left=@as []
 toggle-tiled-right=@as []
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='small-plus'
 
 [org/gnome/nautilus/preferences]
 click-policy='double'
@@ -152,13 +189,14 @@ blur=true
 
 [org/gnome/shell/extensions/caffeine]
 duration-timer=2
-indicator-position-max=3
+indicator-position-max=1
 restore-state=true
 show-indicator='only-active'
 toggle-state=true
 user-enabled=true
 
 [org/gnome/shell/extensions/color-picker]
+colors-history='#122344'
 enable-shortcut=false
 notify-style=uint32 0
 preview-style=uint32 1
@@ -177,6 +215,9 @@ position='Bottom'
 preview-to-monitor-ratio=0.90000000000000002
 switcher-looping-method='Flip Stack'
 switcher-style='Coverflow'
+
+[org/gnome/shell/extensions/emoji-copy]
+recently-used=['😂', '❤️', '😍', '😭', '😊', '😒', '😘', '😩', '🤔', '☺️', '👌']
 
 [org/gnome/shell/extensions/pano]
 active-item-border-color='rgb(137,180,250)'
@@ -299,6 +340,9 @@ icon-size=20
 tray-margin-left=4
 tray-margin-right=0
 
+[org/gnome/shell/extensions/user-theme]
+name='Colloid-Dark-Catppuccin'
+
 [org/gnome/shell/extensions/vitals]
 alphabetize=true
 fixed-widths=true
@@ -308,6 +352,7 @@ position-in-panel=0
 show-storage=false
 show-system=false
 update-time=2
+use-higher-precision=false
 
 [org/gnome/shell/overrides]
 edge-tiling=false
@@ -315,6 +360,29 @@ edge-tiling=false
 [org/gnome/shell/world-clocks]
 locations=@av []
 
+[org/gnome/software]
+check-timestamp=int64 1725315265
+first-run=false
+update-notification-timestamp=int64 1725315272
+
+[org/gnome/system/location]
+enabled=true
+
 [org/gnome/terminal/legacy]
 theme-variant='dark'
 
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=244
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+window-size=(905, 628)
+
+[system/proxy]
+mode='none'
