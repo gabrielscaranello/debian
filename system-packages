@@ -18,6 +18,7 @@ file-roller
 firefox
 firefox-l10n-pt-br
 flameshot
+flatpak
 fonts-liberation
 fonts-noto-color-emoji
 fonts-roboto
@@ -33,6 +34,7 @@ gnome-shell-extension-appindicator
 gnome-shell-extension-caffeine
 gnome-shell-extension-manager
 gnome-shell-extension-tiling-assistant
+gnome-software-plugin-flatpak
 gufw
 hunspell
 hunspell-en-us
