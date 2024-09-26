@@ -1,30 +1,33 @@
 #! /bin/bash
 
+PWD=$(pwd)
+VERSION=$(curl -s https://api.github.com/repos/lassekongo83/adw-gtk3/releases/latest | grep "tag_name" | cut -d '"' -f 4)
+FILE_NAME="adw-gtk3$VERSION.tar.xz"
+OUTPUT_DIR="/tmp/$FILE_NAME"
+DOWNLOAD_URL="https://github.com/lassekongo83/adw-gtk3/releases/download/$VERSION/$FILE_NAME"
+EXTRACT_DIR="/tmp/adw"
+TARGET_DIR="/usr/share/themes"
+
 echo "Setting up GTK Theme..."
 
 echo "Removing old files if exists..."
-sudo rm -rf /usr/share/themes/Colloid-*
-rm -rf ~/.themes/Colloid-*
-rm -rf /tmp/gtk-theme
-rm -rf ~/.config/gtk-4.0
+sudo rm -rf "$TARGET_DIR/adw-*"
+sudo rm -rf "$OUTPUT_DIR"
 
-echo "Cloning GTK Theme..."
-git clone https://github.com/vinceliuice/Colloid-gtk-theme.git /tmp/gtk-theme
+echo "Downloading GTK Theme..."
+wget -c "$DOWNLOAD_URL" -O "$OUTPUT_DIR"
 
 echo "Installing GTK Theme..."
-bash -c "cd /tmp/gtk-theme && ./install.sh -c dark -s standard -l fixed --tweaks catppuccin black rimless"
-sudo mv ~/.themes/Colloid-* /usr/share/themes
+mkdir -p "$EXTRACT_DIR"
+tar -xf "$OUTPUT_DIR" -C "$EXTRACT_DIR"
+sudo mv "$EXTRACT_DIR/adw-gtk3" "$EXTRACT_DIR/adw-gtk3-dark" "$TARGET_DIR/"
 
-echo "Linking GTK-4.0 Theme..."
-mkdir -p ~/.config/gtk-4.0
-ln -fs /usr/share/themes/Colloid-Dark-Catppuccin/gtk-4.0/assets ~/.config/gtk-4.0/assets
-ln -fs /usr/share/themes/Colloid-Dark-Catppuccin/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
-ln -fs /usr/share/themes/Colloid-Dark-Catppuccin/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
+echo "Installing GTK Theme for flatpak..."
+flatpak install flathub -y org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 
 echo "Defining GTK Theme..."
-gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Dark-Catppuccin"
-gsettings set org.gnome.desktop.wm.preferences theme "Colloid-Dark-Catppuccin"
-dconf write /org/gnome/shell/extensions/user-theme/name "'Colloid-Dark-Catppuccin'"
+gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"
+gsettings set org.gnome.desktop.wm.preferences theme "adw-gtk3-dark"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 echo "GTK Theme setup done."
