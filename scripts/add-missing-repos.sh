@@ -2,8 +2,6 @@
 
 PWD=$(pwd)
 
-. $PWD/scripts/_utils.sh
-
 _add_contrib_nonfree_repo() {
 	echo "Add contrib and non-free repository..."
 	sudo apt-add-repository contrib non-free -y
@@ -97,6 +95,6 @@ _add_onlyoffice_repo
 _add_papirus_repo
 _add_spotify_repo
 _add_vscode_repo
-install_nala
-sudo nala update
+
+sudo apt update
 echo "Missing deb repos added."
