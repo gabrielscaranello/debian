@@ -12,6 +12,10 @@ discover-settings=true
 restore-session=false
 use-system-font=false
 
+[org/gnome/calendar]
+active-view='month'
+window-maximized=false
+
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
 
@@ -57,7 +61,7 @@ show-battery-percentage=true
 text-scaling-factor=1.0
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-settings', 'org-gnome-shell-extensions', 'gnome-power-panel', 'org-gnome-software', 'org-gnome-nautilus', 'org-gnome-fileroller']
+application-children=['org-gnome-settings', 'org-gnome-shell-extensions', 'gnome-power-panel', 'org-gnome-software', 'org-gnome-nautilus', 'org-gnome-fileroller', 'org-telegram-desktop']
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
@@ -76,6 +80,9 @@ application-id='org.gnome.Shell.Extensions.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/org-telegram-desktop]
+application-id='org.telegram.desktop.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
@@ -100,6 +107,10 @@ picture-options='zoom'
 picture-uri='file:///usr/share/desktop-base/spacefun-theme/wallpaper/gnome-background.xml'
 primary-color='#ffffff'
 secondary-color='#000000'
+
+[org/gnome/desktop/search-providers]
+disabled=['org.gnome.Nautilus.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.seahorse.Application.desktop']
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/sound]
 event-sounds=true
@@ -157,10 +168,10 @@ command='flameshot gui'
 name='Flameshot'
 
 [org/gnome/shell]
-app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'gnome-system-monitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>}]
+app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'gnome-system-monitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>, 'org.gnome.Extensions.desktop': <{'position': <7>}>}, {'btop.desktop': <{'position': <0>}>, 'mpv.desktop': <{'position': <1>}>, 'bottom.desktop': <{'position': <2>}>, 'nvim.desktop': <{'position': <3>}>}]
 command-history=['r']
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'ubuntu-appindicators@ubuntu.com']
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'replaceActivitiesText@pratap.fastmail.fm', 'caffeine@patapon.info', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pano@elhan.io', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'tiling-assistant@leleat-on-github', 'trayIconsReloaded@selfmade.pl', 'top-bar-organizer@julian.gse.jsts.xyz']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pano@elhan.io', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'trayIconsReloaded@selfmade.pl', 'top-bar-organizer@julian.gse.jsts.xyz', 'tiling-assistant@leleat-on-github', 'caffeine@patapon.info', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'google-chrome.desktop', 'firefox.desktop', 'gimp.desktop', 'dbeaver-ce.desktop', 'obsidian.desktop', 'onlyoffice-desktopeditors.desktop', 'code.desktop', 'spotify.desktop', 'discord.desktop', 'org.telegram.desktop.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='43.9'
@@ -215,9 +226,6 @@ position='Bottom'
 preview-to-monitor-ratio=0.90000000000000002
 switcher-looping-method='Flip Stack'
 switcher-style='Coverflow'
-
-[org/gnome/shell/extensions/emoji-copy]
-recently-used=['😂', '❤️', '😍', '😭', '😊', '😒', '😘', '😩', '🤔', '☺️', '👌']
 
 [org/gnome/shell/extensions/pano]
 active-item-border-color='rgb(137,180,250)'
@@ -299,7 +307,7 @@ debugging-show-tiled-rects=@as []
 default-move-mode=0
 dynamic-keybinding-behaviour=0
 import-layout-examples=false
-last-version-installed=39
+overridden-settings={'org.gnome.mutter.edge-tiling': <false>}
 restore-window=['<Super>Down']
 search-popup-layout=@as []
 single-screen-gap=2
@@ -341,7 +349,7 @@ tray-margin-left=4
 tray-margin-right=0
 
 [org/gnome/shell/extensions/user-theme]
-name='Colloid-Dark-Catppuccin'
+name=''
 
 [org/gnome/shell/extensions/vitals]
 alphabetize=true
@@ -361,7 +369,6 @@ edge-tiling=false
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1725315265
 first-run=false
 update-notification-timestamp=int64 1725315272
 
