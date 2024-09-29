@@ -52,19 +52,27 @@ xkb-options=@as []
 clock-show-seconds=true
 clock-show-weekday=true
 color-scheme='prefer-dark'
-document-font-name='Roboto 10'
+ursor-theme='Bibata-Modern-Ice'
+document-font-name='Liberation Sans 10'
 enable-hot-corners=true
 font-antialiasing='grayscale'
 font-hinting='slight'
-font-name='Roboto 10'
+font-name='Cantarell 10'
+monospace-font-name='JetBrainsMono Nerd Font 11'
 show-battery-percentage=true
 text-scaling-factor=1.0
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-settings', 'org-gnome-shell-extensions', 'gnome-power-panel', 'org-gnome-software', 'org-gnome-nautilus', 'org-gnome-fileroller', 'org-telegram-desktop']
+application-children=['org-gnome-settings', 'org-gnome-shell-extensions', 'gnome-power-panel', 'org-gnome-software', 'org-gnome-nautilus', 'org-gnome-fileroller', 'org-telegram-desktop', 'com-discordapp-discord', 'org-gimp-gimp', 'spotify']
+
+[org/gnome/desktop/notifications/application/com-discordapp-discord]
+application-id='com.discordapp.Discord.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gimp-gimp]
+application-id='org.gimp.GIMP.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
@@ -83,6 +91,9 @@ application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/notifications/application/org-telegram-desktop]
 application-id='org.telegram.desktop.desktop'
+
+[org/gnome/desktop/notifications/application/spotify]
+application-id='spotify.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
@@ -123,7 +134,7 @@ unmaximize=@as []
 [org/gnome/desktop/wm/preferences]
 action-middle-click-titlebar='minimize'
 button-layout='appmenu:close'
-titlebar-font='Roboto Bold 10'
+titlebar-font='Cantarell Bold 10'
 
 [org/gnome/mutter]
 center-new-windows=true
@@ -168,11 +179,11 @@ command='flameshot gui'
 name='Flameshot'
 
 [org/gnome/shell]
-app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'gnome-system-monitor.desktop': <{'position': <5>}>, 'Utilities': <{'position': <6>}>, 'org.gnome.Extensions.desktop': <{'position': <7>}>}, {'btop.desktop': <{'position': <0>}>, 'mpv.desktop': <{'position': <1>}>, 'bottom.desktop': <{'position': <2>}>, 'nvim.desktop': <{'position': <3>}>}]
+app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'gnome-system-monitor.desktop': <{'position': <5>}>, 'io.github.alainm23.planify.desktop': <{'position': <6>}>, 'Utilities': <{'position': <7>}>, 'com.discordapp.Discord.desktop': <{'position': <8>}>}]
 command-history=['r']
 disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'ubuntu-appindicators@ubuntu.com']
-enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pano@elhan.io', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'trayIconsReloaded@selfmade.pl', 'top-bar-organizer@julian.gse.jsts.xyz', 'tiling-assistant@leleat-on-github', 'caffeine@patapon.info', 'user-theme@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'google-chrome.desktop', 'firefox.desktop', 'gimp.desktop', 'dbeaver-ce.desktop', 'obsidian.desktop', 'onlyoffice-desktopeditors.desktop', 'code.desktop', 'spotify.desktop', 'discord.desktop', 'org.telegram.desktop.desktop']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'replaceActivitiesText@pratap.fastmail.fm', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pano@elhan.io', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'trayIconsReloaded@selfmade.pl', 'top-bar-organizer@julian.gse.jsts.xyz', 'tiling-assistant@leleat-on-github', 'caffeine@patapon.info', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'google-chrome.desktop', 'firefox.desktop', 'md.obsidian.Obsidian.desktop', 'io.dbeaver.DBeaverCommunity.desktop', 'org.onlyoffice.desktopeditors.desktop', 'org.gimp.GIMP.desktop', 'code.desktop', 'spotify.desktop', 'org.telegram.desktop.desktop', 'com.discordapp.Discord.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='43.9'
 
@@ -370,7 +381,6 @@ locations=@av []
 
 [org/gnome/software]
 first-run=false
-update-notification-timestamp=int64 1725315272
 
 [org/gnome/system/location]
 enabled=true
@@ -381,7 +391,6 @@ theme-variant='dark'
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
 show-size-column=true
 show-type-column=true
 sidebar-width=244
@@ -390,6 +399,20 @@ sort-directories-first=true
 sort-order='ascending'
 type-format='category'
 window-size=(905, 628)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=148
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(405, 151)
+window-size=(1096, 822)
 
 [system/proxy]
 mode='none'
