@@ -8,8 +8,3 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y $PACKAGES
 echo "Native packages installed."
-
-echo "Enabling Flatpak..."
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-echo "Flatpak enabled."

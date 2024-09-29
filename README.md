@@ -19,8 +19,7 @@ This guide translates my personal installation, with packages that I use in my d
 | `make enable-services`          | Enables and starts system services                                |
 | `make hide-desktop-apps`        | Hides unwanted applications from the desktop                      |
 | `make install-bottom`           | Installs Bottom system monitor                                    |
-| `make install-dbeaver`          | Installs DBeaver                                                  |
-| `make install-discord`          | Installs Discord                                                  |
+| `make install-flatpak-packages` | Installs Selected flatpak packages                                |
 | `make install-gitflow-cjs`      | Installs GitFlow CJS                                              |
 | `make install-gnome-extensions` | Installs GNOME extensions                                         |
 | `make install-go`               | Installs Go language                                              |
@@ -31,7 +30,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make install-neovim`           | Installs Neovim                                                   |
 | `make install-nvidia-packages`  | Install Nvidia Driver Packages                                    |
 | `make install-nvm`              | Installs NVM (Node Version Manager) to manage Node.js versions    |
-| `make install-obsidian`         | Installs Obsidian                                                 |
 | `make install-system-packages`  | Installs essential system packages                                |
 | `make remove-unused-packages`   | Removes unused software packages                                  |
 | `make setup-cursor-theme`       | Configures the mouse cursor theme                                 |
