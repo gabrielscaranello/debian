@@ -19,6 +19,6 @@ echo "Installing yarn..."
 npm i -g yarn
 
 echo "Installing node packages..."
-yarn global add "$PACKAGES"
+echo "$PACKAGES" | xargs yarn global add
 
 echo "NVM and Node installed."

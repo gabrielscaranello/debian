@@ -21,7 +21,10 @@ unzip $OUTPUT_DIR -d $TMP_DIR >/dev/null
 
 echo "Installing fonts..."
 mkdir -p "$TARGET_DIR"
-cp "$FONTS_TO_INSTALL" "$TARGET_DIR"
+
+for font in $FONTS_TO_INSTALL; do
+  cp "$font" "$TARGET_DIR"
+done
 
 echo "Updating font cache..."
 fc-cache -f >/dev/null

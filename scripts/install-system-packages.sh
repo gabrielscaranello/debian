@@ -6,5 +6,5 @@ PACKAGES=$(tr '\n' ' ' <"${PWD}/system-packages")
 echo "Installing native packages..."
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y "$PACKAGES"
+echo "$PACKAGES" | xargs sudo apt install -y
 echo "Native packages installed."

@@ -5,6 +5,6 @@ PACKAGES=$(tr '\n' ' ' <"${PWD}/unused-packages")
 
 echo "Removing unused packages..."
 sudo apt update
-sudo apt purge -y "$PACKAGES"
+echo "$PACKAGES" | xargs sudo apt purge -y
 sudo apt autoremove --purge -y
 echo "Unused packages removed."
