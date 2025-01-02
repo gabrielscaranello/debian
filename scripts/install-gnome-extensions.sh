@@ -8,22 +8,22 @@ TARGET_DIR="$HOME/.local/bin"
 TOOL_FILE="$TARGET_DIR/$SCRIPT_NAME"
 
 _install_gnome_shell_extension_intaller() {
-	mkdir -p $TARGET_DIR
+  mkdir -p $TARGET_DIR
 
-	if [ ! -f "$TOOL_FILE" ]; then
-		echo "Installing GNOME shell extension installer..."
-		wget -c $DOWNLOAD_URL -O $TOOL_FILE
-		chmod +x $TOOL_FILE
-		echo "GNOME shell extension installer installed."
-	fi
+  if [ ! -f "$TOOL_FILE" ]; then
+    echo "Installing GNOME shell extension installer..."
+    wget -c $DOWNLOAD_URL -O $TOOL_FILE
+    chmod +x $TOOL_FILE
+    echo "GNOME shell extension installer installed."
+  fi
 }
 
 _install_gnome_extensions() {
-	echo "Installing extensions..."
+  echo "Installing extensions..."
 
-	for extension in $EXTENSIONS; do
-		$TOOL_FILE --yes $extension
-	done
+  for extension in $EXTENSIONS; do
+    $TOOL_FILE --yes $extension
+  done
 }
 
 echo "Installing gnome extensions..."
