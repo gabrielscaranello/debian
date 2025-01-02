@@ -55,7 +55,6 @@ python3-pip
 python3-virtualenv
 ripgrep
 sassc
-spotify-client
 sqlite3
 telegram-desktop
 tidy

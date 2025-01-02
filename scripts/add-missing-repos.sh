@@ -46,18 +46,6 @@ _add_papirus_repo() {
   echo "Papirus repo added."
 }
 
-_add_spotify_repo() {
-  echo "Adding Spotify repo..."
-  echo "Removing old files if exists..."
-  sudo rm -rf /etc/apt/trusted.gpg.d/spotify.gpg /etc/apt/sources.list.d/spotify.list
-
-  echo "Adding Spotify repo..."
-  curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-
-  echo "Spotify repo added."
-}
-
 _add_vscode_repo() {
   echo "Adding VSCode repo..."
   echo "Removing old files if exists..."
@@ -76,7 +64,6 @@ _add_contrib_nonfree_repo
 _add_docker_repo
 _add_firefox_repo
 _add_papirus_repo
-_add_spotify_repo
 _add_vscode_repo
 
 sudo apt update
