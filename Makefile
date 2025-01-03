@@ -52,6 +52,9 @@ install-nvidia-packages:
 install-nvm:
 	@sh ./scripts/install-nvm.sh
 
+install-rust:
+	@sh ./scripts/install-rust.sh
+
 install-system-packages:
 	@sh ./scripts/install-system-packages.sh
 
