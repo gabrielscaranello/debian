@@ -30,6 +30,7 @@ This guide translates my personal installation, with packages that I use in my d
 | `make install-neovim`           | Installs Neovim                                                   |
 | `make install-nvidia-packages`  | Install Nvidia Driver Packages                                    |
 | `make install-nvm`              | Installs NVM (Node Version Manager) to manage Node.js versions    |
+| `make install-rust`             | Installs Rust using Rustup                                        |
 | `make install-system-packages`  | Installs essential system packages                                |
 | `make remove-unused-packages`   | Removes unused software packages                                  |
 | `make setup-cursor-theme`       | Configures the mouse cursor theme                                 |
