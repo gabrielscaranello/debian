@@ -181,7 +181,7 @@ name='Flameshot'
 [org/gnome/shell]
 app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'gnome-system-monitor.desktop': <{'position': <5>}>, 'io.github.alainm23.planify.desktop': <{'position': <6>}>, 'Utilities': <{'position': <7>}>, 'com.discordapp.Discord.desktop': <{'position': <8>}>}]
 command-history=['r']
-disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'ubuntu-appindicators@ubuntu.com']
+disabled-extensions=['workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'replaceActivitiesText@pratap.fastmail.fm', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'focus-follows-workspace@christopher.luebbemeier.gmail.com', 'pano@elhan.io', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'trayIconsReloaded@selfmade.pl', 'top-bar-organizer@julian.gse.jsts.xyz', 'tiling-assistant@leleat-on-github', 'caffeine@patapon.info', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'google-chrome.desktop', 'firefox.desktop', 'md.obsidian.Obsidian.desktop', 'io.dbeaver.DBeaverCommunity.desktop', 'org.onlyoffice.desktopeditors.desktop', 'org.gimp.GIMP.desktop', 'code.desktop', 'spotify.desktop', 'org.telegram.desktop.desktop', 'com.discordapp.Discord.desktop']
 last-selected-power-profile='power-saver'
