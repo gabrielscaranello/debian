@@ -18,7 +18,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make copy-timeshift-config`    | Copies the Timeshift configuration for system backup              |
 | `make enable-services`          | Enables and starts system services                                |
 | `make hide-desktop-apps`        | Hides unwanted applications from the desktop                      |
-| `make install-bottom`           | Installs Bottom system monitor                                    |
 | `make install-flatpak-packages` | Installs Selected flatpak packages                                |
 | `make install-gitflow-cjs`      | Installs GitFlow CJS                                              |
 | `make install-gnome-extensions` | Installs GNOME extensions                                         |

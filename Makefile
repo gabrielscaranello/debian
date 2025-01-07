@@ -16,9 +16,6 @@ enable-services:
 hide-desktop-apps:
 	@sh ./scripts/hide-desktop-apps.sh
 
-install-bottom:
-	@sh ./scripts/install-bottom.sh
-
 install-flatpak-packages:
 	@sh ./scripts/install-flatpak-packages.sh
 
