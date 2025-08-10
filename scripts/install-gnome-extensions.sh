@@ -26,7 +26,27 @@ _install_gnome_extensions() {
   done
 }
 
+_install_pano_extension() {
+  PANO_GIT_URL=https://github.com/oae/gnome-shell-pano.git
+  PANO_TMP_DIR=/tmp/pano
+  EXTENSION_DIR=$HOME/.local/share/gnome-shell/extensions
+  EXTENSION_TARGET="$EXTENSION_DIR/pano@elhan.io"
+
+  echo "Installing Pano extension..."
+  echo "Removing old files if exists..."
+  rm -rf "$PANO_TMP_DIR" "$EXTENSION_TARGET"
+
+  echo "Cloning Pano..."
+  git clone --depth=1 "$PANO_GIT_URL" "$PANO_TMP_DIR"
+
+  echo "Installing..."
+  mkdir -p "$EXTENSION_DIR"
+  cd "$PANO_TMP_DIR" && yarn install && yarn build
+  mv "$PANO_TMP_DIR/dist" "$EXTENSION_TARGET"
+}
+
 echo "Installing gnome extensions..."
 _install_gnome_shell_extension_intaller
 _install_gnome_extensions
+_install_pano_extension
 echo "GNOME extensions installed."
