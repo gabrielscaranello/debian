@@ -38,6 +38,8 @@ _install_pano_extension() {
     exit 0
   fi
 
+  source "$NVM_PATH"
+
   echo "Installing Pano extension..."
   echo "Removing old files if exists..."
   rm -rf "$PANO_TMP_DIR" "$EXTENSION_TARGET"
