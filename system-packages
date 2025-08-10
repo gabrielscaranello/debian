@@ -38,9 +38,11 @@ gufw
 hunspell
 hunspell-en-us
 hunspell-pt-br
+imagemagick
 jq
 kitty
 libsass1
+libsqlite3-dev
 libu2f-udev
 luarocks
 ninja-build
