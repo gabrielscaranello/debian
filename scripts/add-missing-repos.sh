@@ -4,7 +4,7 @@ PWD=$(pwd)
 
 _add_contrib_nonfree_repo() {
   echo "Add contrib and non-free repository..."
-  sudo sed -r -i 's/^^deb(.*) main non-free-firmware$$/deb\1 main contrib non-free non-free-firmware/g' /etc/apt/sources.list
+  sudo sed -r -i 's/^deb(.*) main non-free-firmware$/deb\1 main contrib non-free non-free-firmware/g' /etc/apt/sources.list
   echo "Contrib and non-free repository added."
 }
 
