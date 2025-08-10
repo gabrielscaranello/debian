@@ -27,10 +27,16 @@ _install_gnome_extensions() {
 }
 
 _install_pano_extension() {
+  NVM_PATH="$HOME/.nvm/nvm.sh"
   PANO_GIT_URL=https://github.com/oae/gnome-shell-pano.git
   PANO_TMP_DIR=/tmp/pano
   EXTENSION_DIR=$HOME/.local/share/gnome-shell/extensions
   EXTENSION_TARGET="$EXTENSION_DIR/pano@elhan.io"
+
+  if [ ! -f "$NVM_PATH" ]; then
+    echo "NVM not found. Please install NVM and Node."
+    exit 0
+  fi
 
   echo "Installing Pano extension..."
   echo "Removing old files if exists..."
