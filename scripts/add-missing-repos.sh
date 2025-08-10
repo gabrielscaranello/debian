@@ -4,7 +4,7 @@ PWD=$(pwd)
 
 _add_contrib_nonfree_repo() {
   echo "Add contrib and non-free repository..."
-  sudo apt-add-repository contrib non-free -y
+  sudo sed -r -i 's/^^deb(.*) main non-free-firmware$$/deb\1 main contrib non-free non-free-firmware/g' /etc/apt/sources.list
   echo "Contrib and non-free repository added."
 }
 
@@ -40,7 +40,7 @@ _add_papirus_repo() {
   sudo rm -rf /etc/apt/sources.list.d/papirus-ppa.list /etc/apt/trusted.gpg.d/papirus-ppa.asc
 
   echo "Adding Papirus repo..."
-  sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu jammy main' > /etc/apt/sources.list.d/papirus-ppa.list"
+  sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu noble main' > /etc/apt/sources.list.d/papirus-ppa.list"
   sudo wget -qO /etc/apt/trusted.gpg.d/papirus-ppa.asc 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446FAF0DF770BFC9AE58A9D36647CAE7F'
 
   echo "Papirus repo added."
@@ -49,13 +49,21 @@ _add_papirus_repo() {
 _add_vscode_repo() {
   echo "Adding VSCode repo..."
   echo "Removing old files if exists..."
-  sudo rm -rf /etc/apt/sources.list.d/vscode.list /etc/apt/keyrings/packages.microsoft.gpg
+  sudo rm -rf /etc/apt/sources.list.d/vscode.sources /usr/share/keyrings/microsoft.gpg
 
   echo "Adding VSCode repo..."
-  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
-  sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-  sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-  rm -f packages.microsoft.gpg
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+  sudo install -D -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft.gpg
+  cat << EOF | sudo tee /etc/apt/sources.list.d/vscode.sources > /dev/null
+Types: deb
+URIs: https://packages.microsoft.com/repos/code
+Suites: stable
+Components: main
+Architectures: amd64,arm64,armhf
+Signed-By: /usr/share/keyrings/microsoft.gpg
+EOF
+
+  rm -f microsoft.gpg
   echo "VSCode repo added."
 }
 
