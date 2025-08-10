@@ -81,11 +81,6 @@ switcher-background-color=(1.0, 1.0, 1.0)
 switcher-looping-method='Flip Stack'
 switcher-style='Coverflow'
 
-[org/gnome/shell/extensions/order-icons]
-order-icons-center=['dateMenu']
-order-icons-left=['LogoMenu', 'activities', 'vitalsMenu', 'focused-window-indicator']
-order-icons-right=['tiling-assistant@leleat-on-github', 'emoji-copy@felipeftn', 'color-picker@tuberry', 'ArchUpdateIndicator', 'quickSettings', 'keyboard', 'a11y', 'dwellClick', 'screenSharing', 'screenRecording']
-
 [org/gnome/shell/extensions/pano]
 active-item-border-color='rgb(137,180,250)'
 hovered-item-border-color='rgb(137,180,250)'
@@ -192,6 +187,12 @@ tile-topright-quarter=['<Super>KP_9']
 tile-topright-quarter-ignore-ta=@as []
 toggle-always-on-top=@as []
 toggle-tiling-popup=@as []
+
+[org/gnome/shell/extensions/top-bar-organizer]
+center-box-order=['dateMenu']
+left-box-order=['LogoMenu', 'vitalsMenu', 'activities', 'focused-window-indicator']
+right-box-order=['emoji-copy@felipeftn', 'color-picker@tuberry', 'tiling-assistant@leleat-on-github', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'keyboard', 'quickSettings']
+
 
 [org/gnome/shell/extensions/vitals]
 alphabetize=true
