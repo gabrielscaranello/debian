@@ -1,3 +1,102 @@
+[org/gnome/TextEditor]
+highlight-current-line=true
+indent-style='space'
+restore-session=false
+show-line-numbers=false
+show-map=false
+style-scheme='Adwaita-dark'
+style-variant='dark'
+use-system-font=true
+
+[org/gnome/desktop/app-folders]
+folder-children=['System', 'Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['yelp.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.baobab.desktop', 'nm-connection-editor.desktop', 'gufw.desktop', 'org.gnome.Settings.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.gnome.DiskUtility.desktop', 'im-config.desktop', 'org.gnome.Logs.desktop']
+name='X-GNOME-Shell-System.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['btop.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.FileRoller.desktop', 'org.flameshot.Flameshot.desktop', 'org.gnome.font-viewer.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'nvim.desktop', 'org.gnome.Papers.desktop', 'org.gnome.clocks.desktop', 'io.github.celluloid_player.Celluloid.desktop', 'org.gnome.seahorse.Application.desktop', 'timeshift-gtk.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Evince.desktop', 'org.gnome.Loupe.desktop']
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/datetime]
+automatic-timezone=true
+
+[org/gnome/desktop/interface]
+clock-show-seconds=true
+clock-show-weekday=true
+font-name='Cantarell 11'
+gtk-enable-primary-paste=false
+monospace-font-name='JetBrainsMono Nerd Font 11'
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='flat'
+
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+recent-files-max-age=30
+remember-recent-files=false
+remove-old-temp-files=true
+remove-old-trash-files=true
+
+[org/gnome/desktop/search-providers]
+disabled=['org.gnome.clocks.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Nautilus.desktop']
+sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/sound]
+event-sounds=false
+theme-name='__custom'
+
+[org/gnome/desktop/wm/keybindings]
+maximize=@as []
+show-desktop=['<Super>d']
+unmaximize=@as []
+
+[org/gnome/desktop/wm/preferences]
+action-middle-click-titlebar='minimize'
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='small-plus'
+
+[org/gnome/nautilus/list-view]
+use-tree-view=true
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-schedule-automatic=false
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+home=['<Super>e']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt>t'
+command='kitty'
+name='Kitty'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Control><Alt>s'
+command='flameshot gui'
+name='Flameshot'
+
+[org/gnome/shell]
+app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'org.gnome.Characters.desktop': <{'position': <2>}>, 'org.gnome.TextEditor.desktop': <{'position': <3>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <4>}>, 'org.gnome.Software.desktop': <{'position': <5>}>, 'System': <{'position': <6>}>, 'Utilities': <{'position': <7>}>}]
+enabled-extensions=['logomenu@aryan_k', 'blur-my-shell@aunetx', 'caffeine@patapon.info', 'color-picker@tuberry', 'CoverflowAltTab@palatis.blogspot.com', 'emoji-copy@felipeftn', 'Hide_Activities@shay.shayel.org', 'tiling-assistant@leleat-on-github', 'top-bar-organizer@julian.gse.jsts.xyz', 'ubuntu-appindicators@ubuntu.com', 'Vitals@CoreCoding.com', 'window-title-is-back@fthx', 'pano@elhan.io', 'AlphabeticalAppGrid@stuarthayhurst']
+favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'code.desktop', 'firefox.desktop', 'google-chrome.desktop', 'md.obsidian.Obsidian.desktop', 'io.github.alainm23.planify.desktop', 'org.onlyoffice.desktopeditors.desktop', 'io.dbeaver.DBeaverCommunity.desktop', 'org.gimp.GIMP.desktop', 'com.discordapp.Discord.desktop']
+welcome-dialog-last-shown-version='48.3'
+
 [org/gnome/shell/extensions/Logo-menu]
 hide-softwarecentre=true
 menu-button-icon-click-type=1
@@ -58,11 +157,11 @@ pipeline='pipeline_default'
 [org/gnome/shell/extensions/caffeine]
 countdown-timer=0
 duration-timer=2
-indicator-position-max=2
+indicator-position-max=3
 restore-state=true
 show-indicator='only-active'
-toggle-state=true
-user-enabled=true
+toggle-state=false
+user-enabled=false
 
 [org/gnome/shell/extensions/coverflowalttab]
 animation-time=0.25
@@ -192,7 +291,6 @@ toggle-tiling-popup=@as []
 center-box-order=['dateMenu']
 left-box-order=['LogoMenu', 'vitalsMenu', 'activities', 'focused-window-indicator']
 right-box-order=['emoji-copy@felipeftn', 'color-picker@tuberry', 'tiling-assistant@leleat-on-github', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'keyboard', 'quickSettings']
-
 
 [org/gnome/shell/extensions/vitals]
 alphabetize=true
