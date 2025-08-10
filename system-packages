@@ -9,9 +9,8 @@ curl
 docker-buildx-plugin
 docker-ce
 docker-ce-cli
-docker-compose
 docker-compose-plugin
-exa
+eza
 fd-find
 file-roller
 firefox
@@ -47,8 +46,8 @@ luarocks
 ninja-build
 numlockx
 packagekit
+papers
 papirus-icon-theme
-piper
 power-profiles-daemon
 protobuf-compiler
 python3
@@ -57,7 +56,6 @@ python3-virtualenv
 ripgrep
 sassc
 sqlite3
-telegram-desktop
 tidy
 timeshift
 ttf-mscorefonts-installer
