@@ -1,11 +1,8 @@
 #! /bin/bash
 
 APPS=(
-  bottom
-  btop
-  mpv
+  display-im7.q16
   nm-connection-editor
-  nvim
   org.gnome.Extensions
 )
 
