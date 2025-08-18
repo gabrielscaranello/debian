@@ -22,9 +22,6 @@ install-flatpak-packages:
 install-gitflow-cjs:
 	@sh ./scripts/install-gitflow-cjs.sh
 
-install-gnome-extensions:
-	@sh ./scripts/install-gnome-extensions.sh
-
 install-go:
 	@sh ./scripts/install-go.sh
 
@@ -63,9 +60,6 @@ setup-cursor-theme:
 
 setup-default-apps:
 	@sh ./scripts/setup-default-apps.sh
-
-setup-gtk-theme:
-	@sh ./scripts/setup-gtk-theme.sh
 
 setup-icon-theme:
 	@sh ./scripts/setup-icon-theme.sh

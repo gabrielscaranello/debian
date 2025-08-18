@@ -20,18 +20,6 @@ _add_firefox_repo() {
   echo "Firefox repo added."
 }
 
-_add_papirus_repo() {
-  echo "Adding Papirus repo..."
-  echo "Removing old files if exists..."
-  sudo rm -rf /etc/apt/sources.list.d/papirus-ppa.list /etc/apt/trusted.gpg.d/papirus-ppa.asc
-
-  echo "Adding Papirus repo..."
-  sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu noble main' > /etc/apt/sources.list.d/papirus-ppa.list"
-  sudo wget -qO /etc/apt/trusted.gpg.d/papirus-ppa.asc 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446FAF0DF770BFC9AE58A9D36647CAE7F'
-
-  echo "Papirus repo added."
-}
-
 _add_vscode_repo() {
   echo "Adding VSCode repo..."
   echo "Removing old files if exists..."
@@ -56,7 +44,6 @@ EOF
 echo "Adding missing deb repos..."
 _add_contrib_nonfree_repo
 _add_firefox_repo
-_add_papirus_repo
 _add_vscode_repo
 
 sudo apt update

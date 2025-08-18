@@ -20,7 +20,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make hide-desktop-apps`        | Hides unwanted applications from the desktop                      |
 | `make install-flatpak-packages` | Installs Selected flatpak packages                                |
 | `make install-gitflow-cjs`      | Installs GitFlow CJS                                              |
-| `make install-gnome-extensions` | Installs GNOME extensions                                         |
 | `make install-go`               | Installs Go language                                              |
 | `make install-google-chrome`    | Installs Google Chrome                                            |
 | `make install-jetbrains-mono`   | Installs JetBrains Mono font                                      |
@@ -34,7 +33,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make remove-unused-packages`   | Removes unused software packages                                  |
 | `make setup-cursor-theme`       | Configures the mouse cursor theme                                 |
 | `make setup-default-apps`       | Sets default applications                                         |
-| `make setup-gtk-theme`          | Configures the GTK theme                                          |
 | `make setup-icon-theme`         | Configures the system icon theme                                  |
 | `make setup-look`               | Configures the system appearance, including themes and icons      |
 | `make setup-swap`               | Configures the system swap partition or file                      |

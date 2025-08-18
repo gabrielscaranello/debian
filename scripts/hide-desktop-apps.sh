@@ -2,8 +2,6 @@
 
 APPS=(
   display-im7.q16
-  nm-connection-editor
-  org.gnome.Extensions
 )
 
 echo "Hiding desktop apps..."
