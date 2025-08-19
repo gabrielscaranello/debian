@@ -2,6 +2,9 @@
 
 APPS=(
   display-im7.q16
+  org.kde.kdeconnect.app
+  org.kde.kdeconnect.sms
+  org.qt.qdbusviewer6
 )
 
 echo "Hiding desktop apps..."

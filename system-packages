@@ -1,7 +1,7 @@
 bat
 btop
 build-essential
-vlc
+cargo
 cmake
 code
 curl
@@ -43,6 +43,7 @@ timeshift
 ttf-mscorefonts-installer
 ufw
 unzip
+vlc
 xclip
 zram-tools
 zsh
