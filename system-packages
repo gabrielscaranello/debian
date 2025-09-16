@@ -1,7 +1,6 @@
 bat
 btop
 build-essential
-celluloid
 cmake
 code
 curl
@@ -40,12 +39,10 @@ jq
 kitty
 libsass1
 libsqlite3-dev
-libu2f-udev
 luarocks
 ninja-build
 numlockx
 packagekit
-papers
 papirus-icon-theme
 power-profiles-daemon
 protobuf-compiler
@@ -60,6 +57,7 @@ timeshift
 ttf-mscorefonts-installer
 ufw
 unzip
+vlc
 xclip
 zram-tools
 zsh
