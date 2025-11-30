@@ -18,6 +18,7 @@ bash "${PWD}/scripts/install-google-chrome.sh"
 bash "${PWD}/scripts/install-jetbrains-mono.sh"
 bash "${PWD}/scripts/install-lazydocker.sh"
 bash "${PWD}/scripts/install-lazygit.sh"
+bash "${PWD}/scripts/install-rust.sh"
 bash "${PWD}/scripts/install-neovim.sh"
 bash "${PWD}/scripts/install-telegram.sh"
 
