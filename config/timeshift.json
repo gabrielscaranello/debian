@@ -18,6 +18,7 @@
   "exclude": [
     ":home:/.local/shared/Trash",
     ":home:/.steam/***",
+    ":home:/.var/app/com.valvesoftware.Steam",
     "/tmp",
     "***node_modules***",
     "***vendor***",
