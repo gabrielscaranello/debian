@@ -1,7 +1,7 @@
 #! /bin/bash
 
 GIT_URL="https://github.com/neovim/neovim"
-BRANCH="stable"
+BRANCH="v0.11.7"
 WORK_DIR="/tmp/neovim"
 
 echo "Installing Neovim..."
